@@ -14,7 +14,7 @@ const calculate = btnValue => {
         const formattedInput = replaceOperators(input);
         try {
             const calculatedValue = eval(formattedInput);
-            result = calculatedValue;
+            result = parseFloat(calculatedValue.toFixed(10));
         }
         catch {
             result = "Error";
